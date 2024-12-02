@@ -1,0 +1,124 @@
+header {
+    background-color:rgb(65, 64, 64);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+
+main {
+    padding: 20px;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #000000, #383736);  
+    
+}
+
+nav h3{
+    background-color:#1a1a1a ;
+    border-radius: 15px;
+}
+
+nav p{
+    max-height: 200px;
+    overflow-y: auto;
+    font-size:large;
+
+}
+
+#yo{
+    background: linear-gradient(to bottom, #0000006b, #383736); 
+    color: white;
+    border-radius: 10px;
+    position: relative;
+}
+
+nav {
+    background-color: #333;
+    border-radius: 15px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background-color: #575757;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.submenu li {
+    width: 200px
+}
+
+.menu li:hover .submenu {
+    display: block;
+}
+
+.botonrgb {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    background-color:rgb(92, 86, 84);
+    color:rgb(255, 255, 255);
+}
+
+p{
+    background-color:383736;
+    color:white;
+    border-radius: 15px;
+}
+
+
+footer p{
+    padding-top: 15px;
+}
+
+.botonrgb:hover {
+    background-color:rgba(75, 73, 70, 0.233);
+}
+
+ 
+footer {
+    height: 75px;
+    text-align: center;
+    background-color:rgb(85, 80, 80);
+    color: white;
+    position: relative; 
+    width: 100%;
+}

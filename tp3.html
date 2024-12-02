@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body{
+        font-size: large;
+        color: rgb(250, 241, 229);
+        background-color: #333;
+    }</style>
+</head>
+<body>
+    <center><h2>Protocolo TCP-IP</h2></center>
+    <p>El protocolo TCP/IP (Transmission Control Protocol / Internet Protocol) es un conjunto de reglas y protocolos que permiten la comunicación entre computadoras a través de una red, como Internet. Este conjunto de protocolos es fundamental para la operación de la red y establece cómo los datos se transmiten y se gestionan entre los dispositivos.
+
+        ¿Qué es TCP/IP?
+        TCP/IP es un modelo de comunicación que está compuesto por dos protocolos principales:
+        
+        TCP (Transmission Control Protocol): Protocolo de control de transmisión.
+        IP (Internet Protocol): Protocolo de Internet.
+        Juntos, TCP e IP permiten la transmisión de datos a través de redes y garantizan que los datos lleguen de manera correcta y en el orden adecuado.
+        
+        1. Protocolo de Internet (IP)
+        IP se encarga de la dirección y el enrutamiento de los paquetes de datos en la red. Es como el sistema de direcciones de una ciudad, donde cada dispositivo conectado a la red tiene una dirección única (como una dirección IP).
+        
+        El protocolo IP define cómo se deben estructurar y enviar los paquetes de datos desde el origen hasta el destino a través de la red.
+        
+        Direccionamiento IP: Cada dispositivo en la red tiene una dirección IP única (como una dirección postal) que le permite ser identificado.
+        Ejemplo de una dirección IP: 192.168.1.1
+        Existen dos versiones de IP:
+        
+        IPv4: Usa direcciones de 32 bits (ej. 192.168.1.1).
+        IPv6: Usa direcciones de 128 bits, diseñado para resolver la escasez de direcciones en IPv4.
+        2. Protocolo de Control de Transmisión (TCP)
+        TCP se encarga de garantizar que los datos lleguen correctamente, sin pérdidas y en el orden correcto. Divide los datos en "paquetes" que se envían a través de la red y luego reensambla estos paquetes en el destino.
+        
+        Fiabilidad: TCP asegura que los datos lleguen de forma íntegra. Si un paquete se pierde, TCP lo reenvía.
+        Control de flujo: Evita que el receptor se sature de datos, gestionando el ritmo al que se envían los paquetes.
+        Control de congestión: TCP también regula la cantidad de datos que se pueden enviar para evitar que la red se congestione.
+        ¿Cómo funciona TCP?
+        Establecimiento de conexión (Three-Way Handshake): Antes de que se envíen los datos, TCP realiza una conexión con el dispositivo receptor. Este proceso es conocido como el "handshake" (apretón de manos), que consta de tres pasos:
+        SYN: El cliente envía una señal de sincronización (SYN) al servidor para iniciar la conexión.
+        SYN-ACK: El servidor responde con una señal de sincronización (SYN) y acuse de recibo (ACK).
+        ACK: El cliente responde con un acuse de recibo (ACK), completando la conexión.
+        Transmisión de datos: Los datos se dividen en paquetes, que se numeran y se envían al destino.
+        Si los paquetes llegan de manera desordenada o faltan algunos, TCP se encarga de reordenarlos o pedir su retransmisión.
+        Terminación de la conexión: Una vez que la comunicación ha terminado, la conexión TCP se cierra de manera controlada.
+        Capas del Modelo TCP/IP
+        El protocolo TCP/IP está organizado en 4 capas principales:
+        
+        Capa de aplicación:
+        
+        En esta capa se encuentran los protocolos que interactúan directamente con el software y el usuario, como HTTP, FTP, SMTP, DNS, etc.
+        Ejemplo: Cuando abres un navegador web, HTTP es el protocolo que se utiliza para cargar páginas.
+        Capa de transporte:
+        
+        Esta capa se encarga de asegurar la entrega correcta de los datos entre los dispositivos. Aquí es donde reside TCP (y UDP, otro protocolo no fiable).
+        TCP maneja el control de flujo y la fiabilidad de la conexión.
+        Capa de Internet:
+        
+        Aquí se encuentra el protocolo IP, que se encarga de la transmisión de los paquetes a través de la red, utilizando direcciones IP para identificar a los dispositivos.
+        Capa de enlace de datos:
+        
+        Esta capa es responsable de la transmisión de datos a través de una red local (como Ethernet) y gestiona las interfaces físicas, como cables y tarjetas de red.
+        </p>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body{
+        font-size: large;
+        color: rgb(250, 241, 229);
+        background-color: #333;
+    }</style>
+</head>
+<body>
+    <center><h2>Profundizacion TCP-IP</h2></center>
+    <p>El TCP/IP (Transmission Control Protocol / Internet Protocol) es el conjunto de protocolos que permiten la comunicación de dispositivos en redes de computadoras, como Internet. Es el estándar fundamental que asegura que los datos sean transmitidos entre dispositivos de manera confiable y eficiente. Para entender completamente cómo funciona TCP/IP, debemos dividir su operación en varios componentes y capas clave.
+
+        1. Modelo de capas de TCP/IP
+        El modelo TCP/IP se estructura en cuatro capas principales, que, aunque son diferentes en comparación con el modelo OSI (que tiene siete capas), cumplen con roles similares para gestionar la comunicación en una red. A continuación se describen estas capas:
+        
+        Capa de aplicación
+        Función: Esta capa proporciona servicios directamente a las aplicaciones del usuario, como navegadores web, correo electrónico, transferencia de archivos, etc.
+        Protocolos importantes:
+        HTTP (HyperText Transfer Protocol): Usado para la navegación web.
+        FTP (File Transfer Protocol): Utilizado para la transferencia de archivos entre dispositivos.
+        SMTP (Simple Mail Transfer Protocol): Usado para el envío de correos electrónicos.
+        DNS (Domain Name System): Traduce nombres de dominio legibles por humanos (como www.example.com) en direcciones IP.
+        Esta capa se encarga de la interacción entre los usuarios finales y la red, interpretando los datos en formatos comprensibles para las aplicaciones.
+        Capa de transporte
+        Función: Proporciona un control fiable de la comunicación entre dispositivos en la red. Asegura que los datos enviados lleguen correctamente y en el orden adecuado.
+        Protocolos importantes:
+        TCP (Transmission Control Protocol): Protocolo orientado a la conexión que garantiza la entrega correcta y ordenada de los paquetes de datos. Utiliza un proceso de "control de flujo", "control de errores" y "retransmisión" para asegurar que los datos lleguen sin corrupción.
+        UDP (User Datagram Protocol): A diferencia de TCP, UDP es un protocolo sin conexión, lo que significa que no realiza el control de errores ni garantiza el orden de los paquetes. Se usa en aplicaciones donde la rapidez es más importante que la fiabilidad, como la transmisión de video o las videollamadas.
+        En esta capa, TCP divide los datos en paquetes y agrega un número de secuencia para que el receptor pueda volver a ensamblarlos correctamente.
+        Capa de Internet
+        Función: Se encarga del direccionamiento y encaminamiento de los paquetes de datos entre redes a través de dispositivos intermedios (como routers). Esta capa se encarga de enviar los paquetes de un origen a un destino a través de la red.
+        Protocolos importantes:
+        IP (Internet Protocol): Este protocolo se ocupa del direccionamiento y la entrega de paquetes. IP asigna direcciones únicas (direcciones IP) a los dispositivos en la red, y encamina los paquetes de datos a través de redes intermedias utilizando estas direcciones. Existen dos versiones de IP:
+        IPv4 (Internet Protocol version 4): Usa direcciones de 32 bits, lo que limita la cantidad de dispositivos que pueden estar conectados a la red.
+        IPv6 (Internet Protocol version 6): Una versión más reciente, que usa direcciones de 128 bits y resuelve la escasez de direcciones IP de IPv4.
+        ICMP (Internet Control Message Protocol): Usado para el diagnóstico de la red (por ejemplo, el comando ping).
+        IP se encarga de "dividir" la información en paquetes pequeños y asegurar que cada uno tenga la dirección correcta del destino. Los paquetes pueden tomar diferentes rutas a través de la red antes de llegar al destino.
+        Capa de enlace de datos
+        Función: Se encarga de la transmisión de los paquetes a través de los medios físicos (cable, fibra óptica, Wi-Fi). La capa de enlace asegura que los paquetes sean entregados a los dispositivos correctos dentro de una red local, proporcionando control de acceso al medio y corrección de errores a nivel de la red local.
+        Protocolos importantes:
+        Ethernet: Uno de los protocolos más comunes en redes locales (LAN), que define cómo se transmiten los datos a través de cables de red.
+        Wi-Fi: Protocolo para redes inalámbricas.
+        En esta capa, los paquetes se convierten en tramas y son enviados a través de las interfaces físicas como cables o señales inalámbricas. Aquí también se realiza la detección de errores a nivel físico.
+        2. Funcionamiento detallado del protocolo TCP/IP
+        Paso 1: Establecimiento de la conexión (Three-Way Handshake)
+        Antes de que los datos sean enviados entre dos dispositivos usando TCP, es necesario establecer una conexión confiable. Esto se hace mediante un proceso llamado el "three-way handshake" (apretón de manos en tres pasos), que incluye:
+        
+        SYN: El dispositivo emisor envía un paquete con una solicitud de conexión al receptor.
+        SYN-ACK: El receptor responde con un paquete de confirmación (SYN-ACK), indicando que ha recibido la solicitud.
+        ACK: El emisor responde con un acuse de recibo final (ACK), estableciendo así la conexión.
+        Una vez completado este proceso, los dos dispositivos pueden empezar a transmitir datos de manera confiable.
+        
+        Paso 2: Transmisión de datos
+        Durante la transmisión de datos, TCP segmenta los datos en "paquetes". Cada paquete contiene:
+        
+        Un número de secuencia para garantizar que los paquetes se reordenen correctamente en el destino.
+        Un número de acuse de recibo (ACK) para confirmar la recepción.
+        Un campo de verificación de errores (checksum) para verificar la integridad de los datos.
+        Si el receptor no recibe un paquete, o si el paquete llega dañado, el receptor solicita que el paquete sea retransmitido.
+        
+        Paso 3: Control de flujo y congestión
+        TCP tiene mecanismos de control de flujo y congestión que garantizan que los datos no se envíen más rápido de lo que el receptor puede procesarlos o más rápido de lo que la red puede manejar. Esto ayuda a evitar la pérdida de datos y la saturación de la red.
+        
+        Control de flujo: TCP ajusta la velocidad a la que envía los datos según la capacidad del receptor.
+        Control de congestión: TCP ajusta la velocidad de transmisión según el estado de la red, reduciendo el envío de datos cuando detecta congestión.
+        Paso 4: Cierre de la conexión
+        Cuando la comunicación ha terminado, TCP realiza el proceso de cierre de la conexión. Este proceso implica el intercambio de paquetes de terminación entre los dos dispositivos para asegurarse de que todos los datos se hayan transmitido correctamente antes de cerrar la conexión.
+        
+        3. ¿Por qué TCP/IP es tan importante?
+        Escalabilidad: TCP/IP ha permitido que Internet crezca de manera masiva. Con el tiempo, se han añadido nuevas tecnologías como IPv6 para garantizar que haya direcciones suficientes para todos los dispositivos conectados.
+        Interoperabilidad: Gracias a TCP/IP, dispositivos de diferentes fabricantes y tipos de redes pueden comunicarse entre sí, lo que fomenta la innovación y la expansión de la red.
+        Fiabilidad: A través de la retransmisión de paquetes, el control de errores y la confirmación de recepción, TCP/IP asegura que los datos lleguen de forma correcta, incluso en redes inestables.</p>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body{
+        font-size: large;
+        color: rgb(250, 241, 229);
+        background-color: #333;
+    }</style>
+</head>
+<body>
+    <center><h2>Criptografía The Imitation Game</h2></center>
+    <p><center>¿Qué es la Criptografía?</center>
+        <br>La criptografía es la ciencia y el arte de proteger la información mediante el uso de códigos y cifrados, de manera que solo las personas autorizadas puedan acceder a ella. Su principal objetivo es garantizar la confidencialidad, integridad, autenticidad y no repudio de los datos.
+        
+        En términos simples, la criptografía se utiliza para convertir información legible (llamada texto claro) en un formato ilegible (llamado texto cifrado) para evitar que personas no autorizadas puedan entenderla, incluso si tienen acceso al mensaje.
+        
+        <br><br><center>¿Cómo Funciona la Criptografía?</center>
+        <br>La criptografía funciona mediante el uso de algoritmos (conjunto de reglas matemáticas) y claves criptográficas que se utilizan para cifrar (convertir) y descifrar (revertir el proceso) la información. Existen dos tipos principales de criptografía: simétrica y asimétrica.
+        <br>
+        1. Criptografía Simétrica
+        En la criptografía simétrica, se usa la misma clave tanto para cifrar como para descifrar el mensaje. La clave debe ser mantenida en secreto y compartida solo entre las partes involucradas en la comunicación.
+        
+        Proceso de cifrado en criptografía simétrica:
+        
+        El emisor tiene un mensaje en texto claro que desea enviar.
+        Utiliza una clave secreta y un algoritmo de cifrado (por ejemplo, AES) para convertir el mensaje en un texto cifrado.
+        El mensaje cifrado se envía a través de una red insegura (como Internet).
+        El receptor usa la misma clave secreta y un algoritmo de descifrado para convertir el mensaje cifrado de nuevo en el texto claro original.
+        Ejemplo de criptografía simétrica:
+        
+        Algoritmo de cifrado: AES (Advanced Encryption Standard)
+        Clave: "clave1234"
+        Si alguien intercepta el mensaje cifrado, no podrá leerlo sin la clave.
+        <br>2. Criptografía Asimétrica (o de Clave Pública)
+        <br>En la criptografía asimétrica, se utilizan dos claves diferentes:
+        
+        Clave pública: Es una clave conocida por todos. Cualquier persona puede usarla para cifrar un mensaje dirigido a una persona específica.
+        Clave privada: Es conocida solo por el receptor del mensaje. Solo esta clave puede descifrar el mensaje cifrado con la clave pública correspondiente.
+        <br>Proceso de cifrado en criptografía asimétrica:
+        
+        El emisor obtiene la clave pública del receptor (por ejemplo, de un certificado digital).
+        Usa la clave pública y un algoritmo de cifrado (como RSA) para cifrar el mensaje.
+        El mensaje cifrado es enviado al receptor.
+        El receptor usa su clave privada para descifrar el mensaje y leerlo.
+        <br>Ejemplo de criptografía asimétrica:
+        
+        Clave pública: cualquiera puede tenerla para cifrar un mensaje.
+        Clave privada: solo el receptor tiene acceso a ella para descifrar el mensaje.
+        Si alguien intercepta el mensaje cifrado, no puede leerlo sin la clave privada correspondiente.
+        Conceptos Clave en Criptografía
+        <br>Clave:
+        
+        Es un conjunto de datos que se utiliza dentro de un algoritmo criptográfico. Las claves pueden ser de diferentes longitudes (más larga generalmente significa mayor seguridad). Existen claves simétricas (compartidas) y asimétricas (pública y privada).
+        <br>Algoritmo de Cifrado:
+        
+        Es un conjunto de reglas matemáticas que transforman el texto claro en texto cifrado. Los algoritmos más comunes son AES (simétrica), RSA (asimétrica) y ECC (curvas elípticas).
+        <br>Firma Digital:
+        
+        Una firma digital se utiliza para autenticar la identidad del remitente de un mensaje y garantizar que el mensaje no ha sido alterado. La firma digital se basa en criptografía asimétrica, utilizando la clave privada para firmar y la clave pública para verificar.
+        <br>Hashing:
+        
+        El hashing es un proceso criptográfico que convierte cualquier entrada de datos (texto claro) en un valor de longitud fija, generalmente un resumen que no puede revertirse. El propósito de un hash es verificar la integridad de los datos (si el mensaje ha sido modificado). Ejemplo de algoritmos de hashing: SHA-256.
+        Aplicaciones de la Criptografía
+        <br>Seguridad en las comunicaciones:
+        
+        La criptografía se utiliza en aplicaciones como WhatsApp, Signal, y Telegram, que cifran las conversaciones para proteger la privacidad de los usuarios.
+        <br>Transacciones en línea:
+        
+        El cifrado protege las transacciones en línea, como compras en sitios web. Los protocolos como SSL/TLS (Secure Sockets Layer/Transport Layer Security) usan criptografía para cifrar la información entre el navegador y el servidor.
+        <br>Protección de contraseñas:
+        
+        Las contraseñas se almacenan de forma segura en las bases de datos mediante algoritmos de hashing (como bcrypt o SHA-256), de manera que incluso si alguien accede a la base de datos, no pueda obtener las contraseñas originales.
+       <br> Autenticación y firma digital:
+        
+        Para verificar la identidad de una persona, se usan sistemas como PKI (Infraestructura de Clave Pública) que involucran criptografía asimétrica para autenticar usuarios y firmas electrónicas.
+        <br>Protección de archivos:
+        
+        Los archivos sensibles pueden ser cifrados con algoritmos como AES para asegurar que solo las personas con la clave adecuada puedan acceder a ellos.
+        Ventajas de la Criptografía
+        <br>Confidencialidad: Los datos están protegidos y no pueden ser leídos por personas no autorizadas.
+        <br>Integridad: Asegura que los datos no han sido alterados durante su transmisión.
+        <br>Autenticación: Permite verificar la identidad de las partes involucradas en una comunicación.
+        <br>No Repudio: El emisor no puede negar haber enviado un mensaje, ya que la firma digital autentica su identidad.
+        </p>
+</body>
+</html>

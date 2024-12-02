@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="portafolioesteban.css">
+    <title>Esteban Cabrera 5ª5ª</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            font-family: Cambria;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            width: 60%;
+            margin: 0 auto;
+            border-radius: 20px;
+            font-size: 15px;
+        }
+
+        h1 {
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            font-size: 30px;
+            margin: 0;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+            margin-left: 20px;
+            margin-top: 20px;
+            margin-bottom: 100px;
+        }
+
+        .textos {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 600px;
+        }
+
+        h2, h3, pre {
+            margin: 0;
+            color: white;
+        }
+
+        img {
+            width: 200px;
+            height: 150px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        nav ul.menu {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul.menu li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul.menu li ul.submenu {
+            display: none;
+            list-style-type: none;
+            position: absolute;
+            background-color: #333;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+        }
+
+        nav ul.menu li:hover ul.submenu {
+            display: block;
+        }
+
+        nav ul.menu li a {
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+    <link rel="shortcut icon" href="https://i.pinimg.com/originals/4e/2e/b5/4e2eb5b8dbb7fdcb5c3aa647d129049b.jpg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="#" onclick="mostrarMensajeYRedirigir('yo.html')">Sobre mí</a></li>
+                <li><a href="https://eest5mdp.edu.ar/" onclick="mostrarMensajeYRedirigir()">Lugar de Estudio</a></li>
+                <li><a href="#" onclick="mostrarMensajeYRedirigir('contacto.html')">Contacto</a></li>
+                <li><a href="#">Lenguajes Aprendidos</a>
+                    <ul class="submenu">
+                        <li><a href="#" onclick="mostrarMensajeYRedirigir('c++.html')">C++</a></li>
+                        <li><a href="#" onclick="mostrarMensajeYRedirigir('css.html')">CSS</a></li>
+                        <li><a href="#" onclick="mostrarMensajeYRedirigir('javascript.html')">JavaScript</a></li>
+                        <li><a href="#" onclick="mostrarMensajeYRedirigir('kotlin.html')">Kotlin</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" onclick="mostrarMensajeYRedirigir('estebantp1.html')">Primer cuatrimestre Teleinf.</a></li>
+            </ul>
+        </nav>
+        <h1>Portafolio sobre mí</h1>
+    </header>
+
+    <div class="content">
+        <div class="textos">
+            <h2>Portafolio sobre mí y mis trabajos</h2>
+            <h3>Introducción:</h3>
+            <pre>
+Soy un estudiante, tengo 16 años, me gusta programar, rapear, escuchar música.
+En este portafolio hay algunos de mis trabajos e información sobre mí.
+Algunos de mis gustos, pasatiempos preferidos, atracciones e intereses.
+            </pre>
+        </div>
+
+        <img src="https://th.bing.com/th/id/OIP.m0OF7Q62oDF55FqS4J39twHaFj?rs=1&pid=ImgDetMain" alt="Imagen sobre Esteban">
+    </div>
+
+    <footer>
+        <p>© Esteban Cabrera. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function mostrarMensajeYRedirigir(url) {
+            alert("Redirigiendo, por favor espere...");
+
+            setTimeout(function() {
+                window.location.href = url;
+            }, 2000); }
+    </script>
+</body>
+</html>

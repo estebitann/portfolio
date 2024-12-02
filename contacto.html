@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información de Contacto</title>
+    <link rel="shortcut icon" href="https://i.pinimg.com/originals/4e/2e/b5/4e2eb5b8dbb7fdcb5c3aa647d129049b.jpg" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #3f3f42;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        .contact-info, .contact-form {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info h2 {
+            color: #333;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+            font-size: 16px;
+            color: #666;
+        }
+
+        .contact-form label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        .contact-form button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .contact-form button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Información de Contacto</h1>
+    </header>
+
+    <div class="container">
+        <div class="contact-info">
+            <h2>Mis Datos de Contacto</h2>
+            <p><strong>Nombre:</strong> Esteban Cabrera</p>
+            <p><strong>Email:</strong> estebansalazar181@gmail.com</p>
+            <p><strong>Teléfono:</strong> +54 9 223 528-7806</p>
+            <p><strong>Redes Sociales:</strong></p>
+            <ul>
+                <li><a href="https://www.facebook.com/profile.php?id=61559687731344" target="_blank">Facebook</a></li>
+                <li><a href="https://www.instagram.com/estebancabrera._/#" target="_blank">Instagram</a></li>
+                <li><a href="https://www.youtube.com/@cgs_rap" target="_blank">YouTube</a></li>
+            </ul>
+        </div>
+
+        <div class="contact-form">
+            <h2>Envíame un Mensaje</h2>
+            <form action="https://formspree.io/f/xyzylwke" method="post">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Mensaje</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Esteban Cabrera. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
